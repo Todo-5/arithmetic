@@ -1,5 +1,7 @@
 package basic.sort;
 
+import basic.generate.IntArray;
+
 import java.util.Arrays;
 
 /**
@@ -12,7 +14,7 @@ import java.util.Arrays;
 public class Bubble {
 
     public static void main(String[] args) {
-        int[] array = {0, 1, 2, 3, 2, 7, 22, 33, 11, 12, 55, 23, -1};
+        int[] array = IntArray.random(100, 1_000);
         new Bubble().sort(array);
         System.out.println(Arrays.toString(array));
     }

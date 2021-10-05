@@ -30,6 +30,24 @@ public class IntArray {
         return value;
     }
 
+    /**
+     * 随机生成有序步长的 int 数组
+     * @param size 最大个数
+     * @param maxStep
+     * @return
+     */
+    public static int[] randomStepOrder(int size, int maxStep) {
+        int[] value = new int[size];
+        int val = 0;
+        for (int i = 0; i < size; i++) {
+            int step = generateValue(maxStep);
+            value[i] = val + step;
+        }
+
+        log.info("random step order int array value:{}", Arrays.toString(value));
+        return value;
+    }
+
     private static int generateValue(int maxValue) {
         return (int) (Math.random() * maxValue + 1);
     }
