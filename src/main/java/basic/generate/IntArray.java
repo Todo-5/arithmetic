@@ -26,7 +26,7 @@ public class IntArray {
             value[i] = generateValue(maxValue);
         }
 
-        log.info("random int array value：{}", Arrays.toString(value));
+        log.info("random int array value：{}", value);
         return value;
     }
 
@@ -44,7 +44,7 @@ public class IntArray {
             value[i] = val + step;
         }
 
-        log.info("random step order int array value:{}", Arrays.toString(value));
+        log.info("random step order int array value:{}", value);
         return value;
     }
 

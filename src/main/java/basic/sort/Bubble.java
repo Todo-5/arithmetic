@@ -1,6 +1,8 @@
 package basic.sort;
 
 import basic.generate.IntArray;
+import basic.tools.Tools;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.Arrays;
 
@@ -11,12 +13,14 @@ import java.util.Arrays;
  * @author: for-us.cc
  * @date: 2021/10/02
  */
+@Slf4j
 public class Bubble {
 
     public static void main(String[] args) {
         int[] array = IntArray.random(100, 1_000);
         new Bubble().sort(array);
-        System.out.println(Arrays.toString(array));
+
+        log.info("sort: {}", array);
     }
 
     private void sort(int[] array) {
@@ -28,15 +32,9 @@ public class Bubble {
             for (int i = 0; i < end; i++) {
                 /* 相邻位置进行匹配 */
                 if (array[i] > array[i + 1]) {
-                    swap(array, i, i + 1);
+                    Tools.swap(array, i, i + 1);
                 }
             }
         }
-    }
-
-    private void swap(int[] array, int i, int j) {
-        int stat = array[i];
-        array[i] = array[j];
-        array[j] = stat;
     }
 }

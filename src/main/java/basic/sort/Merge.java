@@ -21,7 +21,7 @@ public class Merge {
     public static void main(String[] args) {
         int[] array = IntArray.random(11, 100);
         mergerSort(array);
-        log.info("sorted: {}", Arrays.toString(array));
+        log.info("sorted: {}", array);
     }
 
     private static void mergerSort(int[] array) {

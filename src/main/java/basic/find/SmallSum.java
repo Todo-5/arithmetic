@@ -32,11 +32,11 @@ public class SmallSum {
         int correctSum = testComparator(copyArr);
 
         /* 待验证的方法 */
-        int sum = smallSUm(array);
+        int sum = smallSum(array);
         log.info("sum: {}, {}", correctSum, sum);
     }
 
-    private static int smallSUm(int[] array) {
+    public static int smallSum(int[] array) {
         if (array == null || array.length < 2) {
             return 0;
         }

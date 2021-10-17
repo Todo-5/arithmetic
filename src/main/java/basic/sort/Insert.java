@@ -4,6 +4,8 @@ import basic.generate.IntArray;
 
 import java.util.Arrays;
 
+import static basic.tools.Tools.swap;
+
 /**
  * 插入排序
  *
@@ -15,7 +17,7 @@ public class Insert {
     public static void main(String[] args) {
         int[] array = IntArray.random(100, 1_000);
         insert(array);
-        System.out.println(Arrays.toString(array));
+        System.out.println(array);
     }
 
     private static void insert(int[] array) {
@@ -36,11 +38,5 @@ public class Insert {
                 swap(array, j, j + 1);
             }
         }
-    }
-
-    private static void swap(int[] array, int i, int j) {
-        int stat = array[i];
-        array[i] = array[j];
-        array[j] = stat;
     }
 }

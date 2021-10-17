@@ -1,6 +1,8 @@
 package basic.sort;
 
 import basic.generate.IntArray;
+import basic.tools.Tools;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.Arrays;
 
@@ -10,12 +12,13 @@ import java.util.Arrays;
  * @author: for-us.cc
  * @date: 2021/10/02
  */
+@Slf4j
 public class Select {
 
     public static void main(String[] args) {
         int[] array = IntArray.random(100, 1_000);
         select(array);
-        System.out.println(Arrays.toString(array));
+        log.info("sort: {}", array);
     }
 
     private static void select(int[] array) {
@@ -34,14 +37,8 @@ public class Select {
 
             /* i 不是最小值，则转换 */
             if (i != min) {
-                swap(array, i, min);
+                Tools.swap(array, i, min);
             }
         }
-    }
-
-    private static void swap(int[] array, int i, int j) {
-        int stat = array[i];
-        array[i] = array[j];
-        array[j] = stat;
     }
 }

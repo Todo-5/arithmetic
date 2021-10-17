@@ -8,7 +8,4 @@
 target/
 out
 gen
-将删除 .gitignore
-将删除 pom.xml
-将删除 src/
-将删除 target/
+/src/test/
