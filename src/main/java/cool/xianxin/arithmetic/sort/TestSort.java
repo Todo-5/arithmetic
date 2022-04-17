@@ -22,7 +22,7 @@ public class TestSort {
             int[] random = Random.random(r.nextInt(100));
             int[] copyRandom = Arrays.copyOf(random, random.length);
 
-            HeapSort.sort(random);
+            QuickSort.sort(random);
             Arrays.sort(copyRandom);
 
             if (!TestSort.equals(random, copyRandom)) {
