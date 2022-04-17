@@ -23,7 +23,7 @@ public class IntArray {
     public static int[] random(int size, int maxValue) {
         int[] value = new int[size];
         for (int i = 0; i < size; i++) {
-            value[i] = generateValue(maxValue);
+            value[i] = IntValue.generateValue(maxValue);
         }
 
         log.info("random int array value：{}", value);
@@ -40,7 +40,7 @@ public class IntArray {
         int[] value = new int[size];
         int val = 0;
         for (int i = 0; i < size; i++) {
-            int step = generateValue(maxStep);
+            int step = IntValue.generateValue(maxStep);
             value[i] = val + step;
         }
 
@@ -48,7 +48,5 @@ public class IntArray {
         return value;
     }
 
-    private static int generateValue(int maxValue) {
-        return (int) (Math.random() * maxValue + 1);
-    }
+
 }
